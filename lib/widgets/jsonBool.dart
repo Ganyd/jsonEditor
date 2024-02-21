@@ -53,7 +53,7 @@ class _JsonBoolState extends State<JsonBool> {
             setState(() {
               _isChecked = newValue!;
               if (widget.onChanged != null) {
-                widget.onChanged!(newValue!);
+                widget.onChanged!(newValue);
               }
             });
           },
