@@ -51,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('WARNING: the json string entered isn\'t in the correct format'),
+          content: Text('WARNING: the json string entered is either incorrect or isn\'t support'),
           behavior: SnackBarBehavior.floating,
           margin: EdgeInsets.only(bottom: 16.0, right: 16.0),
           duration: Duration(seconds: 2),
@@ -261,7 +261,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               }
               else{
-                print(type.toString());
+                showAlert = true;
               }
 
               json.forEach((key, value) {
